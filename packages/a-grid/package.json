@@ -1,0 +1,58 @@
+{
+  "name": "a-grid",
+  "type": "module",
+  "version": "0.0.0",
+  "author": "LoTwT <l709937065@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/LoTwT/a-grid#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoTwT/a-grid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LoTwT/a-grid/issues"
+  },
+  "keywords": [
+    "grid",
+    "css grid",
+    "grid layout",
+    "a-grid"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build -w",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "magic-string": "^0.30.11",
+    "vue": "^3.4.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.3",
+    "unplugin-auto-import": "^0.18.2",
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.0.3",
+    "vue-tsc": "^2.0.29"
+  }
+}
