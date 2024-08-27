@@ -3,14 +3,15 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.8.0",
+  "packageManager": "pnpm@9.9.0",
   "author": "LoTwT <l709937065@gmail.com>",
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
     "prettier": "prettier --write .",
-    "up": "taze latest -I -f"
+    "up": "taze latest -I -f -r",
+    "play": "pnpm -C playground run dev"
   },
   "devDependencies": {
     "@ayingott/eslint-config": "^1.4.6",
@@ -21,7 +22,7 @@
     "lint-staged": "^15.2.9",
     "prettier": "^3.3.3",
     "simple-git-hooks": "^2.11.1",
-    "taze": "^0.16.6",
+    "taze": "^0.16.7",
     "typescript": "^5.5.4"
   },
   "simple-git-hooks": {
