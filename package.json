@@ -1,0 +1,37 @@
+{
+  "name": "a-grid-monorepo",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.8.0",
+  "description": "a-grid",
+  "author": "LoTwT <l709937065@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "simple-git-hooks",
+    "prettier": "prettier --write .",
+    "up": "taze latest -I -f"
+  },
+  "devDependencies": {
+    "@ayingott/eslint-config": "^1.4.6",
+    "@ayingott/prettier-config": "^1.2.6",
+    "@types/node": "^22.5.0",
+    "bumpp": "^9.5.2",
+    "eslint": "^9.9.1",
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3",
+    "simple-git-hooks": "^2.11.1",
+    "taze": "^0.16.6",
+    "typescript": "^5.5.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "prettier": "@ayingott/prettier-config"
+}
