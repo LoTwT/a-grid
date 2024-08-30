@@ -13,7 +13,7 @@ import { AGrid, AGridItem } from "a-grid"
     <a-grid-item tag="a" :span="3" style="background-color: lightblue">
       3
     </a-grid-item>
-    <a-grid-item tag="aside" start="12" style="background-color: lightcoral">
+    <a-grid-item tag="aside" span="6" style="background-color: lightcoral">
       4
     </a-grid-item>
   </a-grid>

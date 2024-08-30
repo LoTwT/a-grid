@@ -7,6 +7,7 @@
   "author": "LoTwT <l709937065@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "pnpm -C packages/a-grid run dev",
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
     "prettier": "prettier --write .",
