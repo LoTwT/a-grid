@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "pnpm -C packages/a-grid run dev",
+    "build": "pnpm -C packages/a-grid run build",
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
     "prettier": "prettier --write .",

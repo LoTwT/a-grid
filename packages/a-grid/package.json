@@ -22,6 +22,10 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./resolver": {
+      "import": "./dist/resolver.js",
+      "require": "./dist/resolver.cjs"
     }
   },
   "main": "./dist/index.cjs",
@@ -39,8 +43,10 @@
     "dist"
   ],
   "scripts": {
-    "dev": "vite build -w",
-    "build": "vite build"
+    "dev": "pnpm run build:resolver && vite build -w",
+    "build": "pnpm run build:resolver && pnpm run build:components",
+    "build:components": "vite build",
+    "build:resolver": "tsup"
   },
   "dependencies": {
     "magic-string": "^0.30.11",
@@ -49,8 +55,10 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
     "sass": "^1.77.8",
+    "tsup": "^8.2.4",
     "typescript": "^5.5.4",
     "unplugin-auto-import": "^0.18.2",
+    "unplugin-vue-components": "^0.27.4",
     "vite": "^5.4.2",
     "vite-plugin-dts": "^4.0.3",
     "vue-tsc": "^2.0.29"

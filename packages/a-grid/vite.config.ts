@@ -14,6 +14,7 @@ export default defineConfig({
     VitePluginInlineCSS(),
   ],
   build: {
+    emptyOutDir: false,
     lib: {
       name: "a-grid",
       entry: {

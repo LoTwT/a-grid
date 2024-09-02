@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { AGrid, AGridItem } from "a-grid"
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <a-grid tag="section">
