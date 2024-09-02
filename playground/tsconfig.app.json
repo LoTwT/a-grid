@@ -10,7 +10,7 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
 
-    "types": ["a-grid/global"],
+    "types": ["@ayingott/a-grid/global"],
     "allowImportingTsExtensions": true,
 
     /* Linting */

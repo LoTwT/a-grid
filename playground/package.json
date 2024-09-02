@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "a-grid": "workspace:*",
+    "@ayingott/a-grid": "workspace:*",
     "vue": "^3.4.38"
   },
   "devDependencies": {

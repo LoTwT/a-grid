@@ -1,13 +1,13 @@
-# a-grid
+# @ayingott/a-grid
 
-[![a-grid](https://img.shields.io/npm/v/a-grid.svg)](https://npmjs.com/package/a-grid)
+[![@ayingott/a-grid](https://img.shields.io/npm/v/@ayingott/a-grid.svg)](https://npmjs.com/package/@ayingott/a-grid)
 
 Grid components for web development based on the CSS Grid and Vue.
 
 ## Installation
 
 ```bash
-pnpm add a-grid
+pnpm add @ayingott/a-grid
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ pnpm add a-grid
 ```ts
 // main.ts
 import { createApp } from "vue"
-import AGrid from "a-grid"
+import AGrid from "@ayingott/a-grid"
 import App from "./App.vue"
 
 const app = createApp(App)
@@ -35,14 +35,14 @@ If using Volar and full import, you can add the global component type definition
 {
   "compilerOptions": {
     // ...
-    "types": ["a-grid/global"]
+    "types": ["@ayingott/a-grid/global"]
   }
 }
 ```
 
 ### Auto Import
 
-`a-grid` provides a resolver so that you can use `unplugin-vue-components` to auto import components.
+`@ayingott/a-grid` provides a resolver so that you can use `unplugin-vue-components` to auto import components.
 
 ```bash
 pnpm add -D unplugin-vue-components
@@ -52,7 +52,7 @@ pnpm add -D unplugin-vue-components
 // vite.config.ts
 import { defineConfig } from "vite"
 import Components from "unplugin-vue-components/vite"
-import AGridResolver from "a-grid/resolver"
+import AGridResolver from "@ayingott/a-grid/resolver"
 
 export default defineConfig({
   // ...

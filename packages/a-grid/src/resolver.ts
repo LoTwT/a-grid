@@ -9,7 +9,7 @@ export function AGridResolver(): ComponentResolver {
       if (components.includes(name)) {
         return {
           name,
-          from: "a-grid",
+          from: "@ayingott/a-grid",
         }
       }
     },

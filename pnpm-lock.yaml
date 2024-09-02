@@ -78,7 +78,7 @@ importers:
 
   playground:
     dependencies:
-      a-grid:
+      '@ayingott/a-grid':
         specifier: workspace:*
         version: link:../packages/a-grid
       vue:

@@ -1,9 +1,9 @@
 import { createApp } from "vue"
-import AGridPlugin from "a-grid"
+// import AGrid from "@ayingott/a-grid"
 import App from "./App.vue"
 
 const app = createApp(App)
 
-app.use(AGridPlugin)
+// app.use(AGrid)
 
 app.mount("#app")
