@@ -13,15 +13,16 @@
     "prepare": "simple-git-hooks",
     "prettier": "prettier --write .",
     "up": "taze latest -I -f -r",
-    "play": "pnpm -C playground run dev"
+    "play": "pnpm -C playground run dev",
+    "release": "pnpm run build && bumpp -r && pnpm -r publish"
   },
   "devDependencies": {
     "@ayingott/eslint-config": "^1.4.6",
     "@ayingott/prettier-config": "^1.2.6",
-    "@types/node": "^22.5.0",
+    "@types/node": "^22.5.2",
     "bumpp": "^9.5.2",
     "eslint": "^9.9.1",
-    "lint-staged": "^15.2.9",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "simple-git-hooks": "^2.11.1",
     "taze": "^0.16.7",
