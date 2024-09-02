@@ -32,6 +32,7 @@ export default defineConfig({
         },
         // preserveModules: true,
         format: "es",
+        exports: "named",
       },
     },
   },
