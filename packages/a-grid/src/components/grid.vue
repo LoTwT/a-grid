@@ -3,28 +3,23 @@ defineOptions({
   name: "AGrid",
 })
 
-const props = withDefaults(
-  defineProps<{
-    tag: keyof HTMLElementTagNameMap
-    columns: number
-    rowGap: string | number
-    columnGap: string | number
-  }>(),
-  {
-    tag: "div",
-    columns: 12,
-    rowGap: 16,
-    columnGap: 16,
-  },
-)
+const {
+  tag = "div",
+  columns = 12,
+  rowGap = 16,
+  columnGap = 16,
+} = defineProps<{
+  tag?: keyof HTMLElementTagNameMap
+  columns?: number
+  rowGap?: string | number
+  columnGap?: string | number
+}>()
 
 const internalRowGap = computed(() =>
-  typeof props.rowGap === "number" ? `${props.rowGap}px` : props.rowGap,
+  typeof rowGap === "number" ? `${rowGap}px` : rowGap,
 )
 const internalColumnGap = computed(() =>
-  typeof props.columnGap === "number"
-    ? `${props.columnGap}px`
-    : props.columnGap,
+  typeof columnGap === "number" ? `${columnGap}px` : columnGap,
 )
 </script>
 
