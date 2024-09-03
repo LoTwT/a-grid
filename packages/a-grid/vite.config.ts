@@ -10,7 +10,10 @@ export default defineConfig({
   plugins: [
     vue(),
     autoImport({ imports: ["vue"], dts: "./src/types/auto-imports.d.ts" }),
-    dts({ tsconfigPath: "./tsconfig.lib.json" }),
+    dts({
+      tsconfigPath: "./tsconfig.lib.json",
+      cleanVueFileName: true,
+    }),
     VitePluginInlineCSS(),
   ],
   build: {
