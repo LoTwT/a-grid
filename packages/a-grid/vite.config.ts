@@ -17,11 +17,10 @@ export default defineConfig({
     VitePluginInlineCSS(),
   ],
   build: {
-    emptyOutDir: false,
     lib: {
-      name: "a-grid",
       entry: {
         index: "src/index.ts",
+        resolver: "src/resolver.ts",
       },
       formats: ["es", "cjs"],
     },
@@ -33,7 +32,6 @@ export default defineConfig({
         globals: {
           vue: "Vue",
         },
-        // preserveModules: true,
         format: "es",
         exports: "named",
       },
