@@ -2,7 +2,7 @@
   "type": "module",
   "version": "0.0.3",
   "private": true,
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.10.0",
   "author": "LoTwT <l709937065@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -18,14 +18,14 @@
   "devDependencies": {
     "@ayingott/eslint-config": "^1.4.6",
     "@ayingott/prettier-config": "^1.2.6",
-    "@types/node": "^22.5.4",
+    "@types/node": "^22.5.5",
     "bumpp": "^9.5.2",
     "eslint": "^9.10.0",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "simple-git-hooks": "^2.11.1",
-    "taze": "^0.16.7",
-    "typescript": "^5.5.4"
+    "taze": "^0.16.8",
+    "typescript": "^5.6.2"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged"
