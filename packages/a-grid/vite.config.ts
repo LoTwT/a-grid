@@ -1,16 +1,19 @@
 import path from "node:path"
 import type { Plugin } from "vite"
 import { defineConfig } from "vite"
-import vue from "@vitejs/plugin-vue"
-import autoImport from "unplugin-auto-import/vite"
-import dts from "vite-plugin-dts"
+import Vue from "@vitejs/plugin-vue"
+import AutoImport from "unplugin-auto-import/vite"
+import Dts from "vite-plugin-dts"
 import MagicString from "magic-string"
 
 export default defineConfig({
   plugins: [
-    vue(),
-    autoImport({ imports: ["vue"], dts: "./src/types/auto-imports.d.ts" }),
-    dts({
+    Vue(),
+    AutoImport({
+      imports: ["vue", "vitest"],
+      dts: "./src/types/auto-imports.d.ts",
+    }),
+    Dts({
       tsconfigPath: "./tsconfig.lib.json",
       cleanVueFileName: true,
     }),
@@ -35,6 +38,14 @@ export default defineConfig({
         format: "es",
         exports: "named",
       },
+    },
+  },
+  test: {
+    clearMocks: true,
+    environment: "jsdom",
+    coverage: {
+      enabled: true,
+      include: ["src/components/**/*.vue"],
     },
   },
 })
