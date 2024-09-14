@@ -14,7 +14,8 @@
     "up": "taze latest -I -f -r",
     "play": "pnpm -C playground run dev",
     "release": "pnpm run build && bumpp -r && pnpm -r publish",
-    "test": "pnpm -C packages/a-grid run test"
+    "test": "pnpm -C packages/a-grid run test",
+    "test:ci": "pnpm -C packages/a-grid run test:ci"
   },
   "devDependencies": {
     "@ayingott/eslint-config": "^1.4.6",
@@ -30,7 +31,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged",
-    "pre-push": "pnpm run test"
+    "pre-push": "pnpm run test:ci"
   },
   "lint-staged": {
     "*": [
