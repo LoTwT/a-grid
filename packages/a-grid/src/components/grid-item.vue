@@ -3,15 +3,18 @@ defineOptions({
   name: "AGridItem",
 })
 
-const {
-  tag = "div",
-  start = "auto",
-  span = 1,
-} = defineProps<{
-  tag?: keyof HTMLElementTagNameMap
-  start?: string | number
-  span?: number
-}>()
+withDefaults(
+  defineProps<{
+    tag?: keyof HTMLElementTagNameMap
+    start?: string | number
+    span?: number
+  }>(),
+  {
+    tag: "div",
+    start: "auto",
+    span: 1,
+  },
+)
 </script>
 
 <template>
