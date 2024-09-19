@@ -5,7 +5,7 @@
     "moduleDetection": "force",
     "module": "esnext",
     "moduleResolution": "node",
-    "types": ["vitest/globals", "jsdom"],
+    "types": ["vitest/globals", "vitest/jsdom"],
     "allowImportingTsExtensions": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
