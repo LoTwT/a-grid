@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils"
-import { AGrid, AGridItem } from ".."
+import { AGrid, AGridItem } from "../src"
 
 describe("a-grid", () => {
   describe("grid.vue", () => {

@@ -5,13 +5,14 @@ import Vue from "@vitejs/plugin-vue"
 import AutoImport from "unplugin-auto-import/vite"
 import Dts from "vite-plugin-dts"
 import MagicString from "magic-string"
+import fg from "fast-glob"
 
 export default defineConfig({
   plugins: [
     Vue(),
     AutoImport({
       imports: ["vue", "vitest"],
-      dts: "./src/types/auto-imports.d.ts",
+      dts: true,
     }),
     Dts({
       tsconfigPath: "./tsconfig.lib.json",
@@ -24,6 +25,13 @@ export default defineConfig({
       entry: {
         index: "src/index.ts",
         resolver: "src/resolver.ts",
+        ...fg
+          .sync("src/components/*.vue")
+          .reduce<Record<string, string>>((res, filePath) => {
+            const name = path.basename(filePath, ".vue")
+            res[`components/${name}`] = filePath
+            return res
+          }, {}),
       },
       formats: ["es", "cjs"],
     },
@@ -35,8 +43,13 @@ export default defineConfig({
         globals: {
           vue: "Vue",
         },
-        format: "es",
         exports: "named",
+        assetFileNames: (chunkInfo) => {
+          if (chunkInfo.name?.endsWith(".css")) {
+            return "components/[name][extname]"
+          }
+          return "assets/[name]-[hash][extname]"
+        },
       },
     },
   },
