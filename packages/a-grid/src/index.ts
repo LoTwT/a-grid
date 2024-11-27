@@ -1,6 +1,6 @@
 import type { Plugin } from "vue"
-import AGrid from "./components/grid.vue"
 import AGridItem from "./components/grid-item.vue"
+import AGrid from "./components/grid.vue"
 
 export { AGrid, AGridItem }
 

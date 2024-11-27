@@ -16,8 +16,8 @@ pnpm add @ayingott/a-grid
 
 ```ts
 // main.ts
-import { createApp } from "vue"
 import AGrid from "@ayingott/a-grid"
+import { createApp } from "vue"
 import App from "./App.vue"
 
 const app = createApp(App)
@@ -50,9 +50,9 @@ pnpm add -D unplugin-vue-components
 
 ```ts
 // vite.config.ts
-import { defineConfig } from "vite"
-import Components from "unplugin-vue-components/vite"
 import AGridResolver from "@ayingott/a-grid/resolver"
+import Components from "unplugin-vue-components/vite"
+import { defineConfig } from "vite"
 
 export default defineConfig({
   // ...

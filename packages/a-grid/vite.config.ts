@@ -1,11 +1,11 @@
-import path from "node:path"
 import type { Plugin } from "vite"
-import { defineConfig } from "vite"
+import path from "node:path"
 import Vue from "@vitejs/plugin-vue"
-import AutoImport from "unplugin-auto-import/vite"
-import Dts from "vite-plugin-dts"
-import MagicString from "magic-string"
 import fg from "fast-glob"
+import MagicString from "magic-string"
+import AutoImport from "unplugin-auto-import/vite"
+import { defineConfig } from "vite"
+import Dts from "vite-plugin-dts"
 
 export default defineConfig({
   plugins: [
