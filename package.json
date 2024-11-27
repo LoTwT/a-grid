@@ -2,7 +2,7 @@
   "type": "module",
   "version": "0.0.3",
   "private": true,
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@9.14.2",
   "author": "LoTwT <l709937065@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -18,16 +18,16 @@
     "test:ci": "pnpm -C packages/a-grid run test:ci"
   },
   "devDependencies": {
-    "@ayingott/eslint-config": "^1.4.6",
-    "@ayingott/prettier-config": "^1.2.6",
-    "@types/node": "^22.5.5",
-    "bumpp": "^9.5.2",
-    "eslint": "^9.10.0",
+    "@ayingott/eslint-config": "^1.4.7",
+    "@ayingott/prettier-config": "^1.2.7",
+    "@types/node": "^22.10.0",
+    "bumpp": "^9.8.1",
+    "eslint": "^9.15.0",
     "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "simple-git-hooks": "^2.11.1",
-    "taze": "^0.16.8",
-    "typescript": "^5.6.2"
+    "taze": "^0.18.0",
+    "typescript": "^5.7.2"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged",
